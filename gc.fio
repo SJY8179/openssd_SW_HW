@@ -1,0 +1,17 @@
+[global]
+ioengine=libaio
+direct=1
+filename=/dev/nvme1n1
+group_reporting
+
+[gc_randwrite]
+rw=randwrite
+bs=4k
+iodepth=32
+numjobs=1
+runtime=600
+time_based
+write_bw_log=gc
+write_iops_log=gc
+write_lat_log=gc
+log_avg_msec=1000
